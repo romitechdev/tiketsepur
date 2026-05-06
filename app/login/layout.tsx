@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsecond.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsepur.com'
 
 export const metadata: Metadata = {
-  title: 'Masuk | TiketSecond',
-  description: 'Masuk ke akun TiketSecond Anda dengan email atau Google. Akses aman menggunakan Supabase Auth.',
+  title: 'Masuk | TiketSepur',
+  description: 'Masuk ke akun TiketSepur Anda dengan email atau Google. Akses aman menggunakan Supabase Auth.',
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: 'Masuk - TiketSecond',
-    description: 'Masuk ke akun TiketSecond Anda untuk mulai membeli atau menjual tiket kereta.',
+    title: 'Masuk - TiketSepur',
+    description: 'Masuk ke akun TiketSepur Anda untuk mulai membeli atau menjual tiket kereta.',
     url: `${baseUrl}/login`,
     type: 'website',
   },

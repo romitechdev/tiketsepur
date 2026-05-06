@@ -38,7 +38,7 @@
 - 🎨 Color: Professional Blue (#0A2463) + Red Accent
 - 💡 Best for: Professional marketplace platform
 
-### 🏅 5. TIKETSECOND (Current)
+### 🏅 5. TIKETSEPUR (Current)
 **Reservasi Kereta Untuk Urbanis Modern**
 - ✅ Already established
 - ✅ Unique positioning
@@ -66,7 +66,7 @@
 
 ### Premium & Sophisticated
 11. **VELOCE RAIL** - Kecepatan Dalam Setiap Perjalanan
-12. **TIKETSECOND** ✨ - Marketplace Tiket Kereta Preloved
+12. **TIKETSEPUR** ✨ - Marketplace Tiket Kereta Preloved
 13. **TRANSIT PRO** - Professional Transit Solutions
 14. **URBAN RAIL** - Rail Solutions for Urban Travelers
 15. **TRACKWISE** - Wise Choices, Smart Travels
@@ -95,7 +95,7 @@
 | TIKETIN        | ⭐⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐| ⭐⭐⭐         | ⭐⭐⭐⭐⭐| 🔥🔥🔥   |
 | SWIFTIX        | ⭐⭐⭐⭐      | ⭐⭐⭐  | ⭐⭐⭐⭐         | ⭐⭐⭐⭐ | 🔥🔥    |
 | TIKEX          | ⭐⭐⭐⭐      | ⭐⭐⭐  | ⭐⭐⭐⭐⭐       | ⭐⭐⭐⭐⭐| 🔥🔥    |
-| TIKETSECOND    | ⭐⭐⭐⭐      | ⭐⭐⭐⭐ | ⭐⭐⭐          | ⭐⭐⭐⭐ | 🔥🔥🔥   |
+| TIKETSEPUR    | ⭐⭐⭐⭐      | ⭐⭐⭐⭐ | ⭐⭐⭐          | ⭐⭐⭐⭐ | 🔥🔥🔥   |
 
 ---
 
@@ -162,7 +162,7 @@ Icons: Refined elegant symbols
 → Go with **RAILEX** - modern, scalable, global appeal
 
 **If want to keep current identity:**
-→ Strengthen **TIKETSECOND** - sudah selaras dengan positioning resale ticket
+→ Strengthen **TIKETSEPUR** - sudah selaras dengan positioning resale ticket
 
 **If want something fast & dynamic:**
 → Choose **SWIFTIX** - represents speed, perfect for quick transactions

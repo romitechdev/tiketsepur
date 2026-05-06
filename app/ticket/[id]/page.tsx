@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Train, MessageSquare, MapPin, Clock } from "lucide-react";
 import SellerAvatar from "@/components/SellerAvatar";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsecond.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsepur.vercel.app'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!ticket) {
     return {
-      title: 'Tiket Tidak Ditemukan | TiketSecond',
+      title: 'Tiket Tidak Ditemukan | TiketSepur',
     }
   }
 
-  const title = `${ticket.asal} → ${ticket.tujuan} (${ticket.tanggal}) | TiketSecond`
-  const description = `Beli tiket kereta dari ${ticket.asal} ke ${ticket.tujuan} tanggal ${ticket.tanggal} jam ${ticket.jam}. Kelas ${ticket.kelas || 'Standar'}. Harga Rp${ticket.harga.toLocaleString('id-ID')}. Transaksi aman di marketplace TiketSecond.`
+  const title = `${ticket.asal} → ${ticket.tujuan} (${ticket.tanggal}) | TiketSepur`
+  const description = `Beli tiket kereta dari ${ticket.asal} ke ${ticket.tujuan} tanggal ${ticket.tanggal} jam ${ticket.jam}. Kelas ${ticket.kelas || 'Standar'}. Harga Rp${ticket.harga.toLocaleString('id-ID')}. Transaksi aman di marketplace TiketSepur.`
   const url = `${baseUrl}/ticket/${id}`
 
   return {
@@ -77,7 +77,7 @@ export default async function TicketPage({ params }: { params: Promise<{ id: str
   const sellerName = ticket.user.name?.trim() || 'Penjual';
 
   const waNumber = ticket.user.phone ? ticket.user.phone.replace(/^0/, '62') : "";
-  const waUrl = waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(`Halo, saya tertarik dengan tiket kereta dari ${ticket.asal} ke ${ticket.tujuan} tanggal ${ticket.tanggal} yang Anda posting di TiketSecond.`)}` : '';
+  const waUrl = waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(`Halo, saya tertarik dengan tiket kereta dari ${ticket.asal} ke ${ticket.tujuan} tanggal ${ticket.tanggal} yang Anda posting di TiketSepur.`)}` : '';
 
   // Parse date (YYYY-MM-DD format)
   const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
@@ -150,11 +150,11 @@ export default async function TicketPage({ params }: { params: Promise<{ id: str
               <div>
                 <h3 className="text-lg font-black uppercase tracking-tighter mb-3">Tiket Digital Disertakan</h3>
                 <p className="text-xs font-medium text-gray-600 mb-6 leading-relaxed max-w-sm">
-                  Tiket ini sudah diverifikasi oleh sistem TiketSecond. Kursi tetap aman, dan Anda cukup tunjukkan tiket digital saat proses check-in.
+                  Tiket ini sudah diverifikasi oleh sistem TiketSepur. Kursi tetap aman, dan Anda cukup tunjukkan tiket digital saat proses check-in.
                 </p>
                 <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest">
                   <div className="w-4 h-4 bg-black flex items-center justify-center text-white text-[8px] rounded-full">✓</div>
-                  Terverifikasi Oleh Sistem TiketSecond
+                  Terverifikasi Oleh Sistem TiketSepur
                 </div>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default async function TicketPage({ params }: { params: Promise<{ id: str
                </div>
                <div>
                  <h4 className="text-lg font-black uppercase tracking-tighter sm:truncate max-w-[150px]">{sellerName}</h4>
-                 <p className="text-[9px] font-black uppercase tracking-widest text-gray-500 mt-1">Penjual Terverifikasi TiketSecond</p>
+                 <p className="text-[9px] font-black uppercase tracking-widest text-gray-500 mt-1">Penjual Terverifikasi TiketSepur</p>
                </div>
              </div>
 

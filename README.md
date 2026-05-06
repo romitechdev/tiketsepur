@@ -1,4 +1,4 @@
-# TiketSecond
+# TiketSepur
 
 Marketplace tiket kereta berbasis Next.js App Router, Prisma, dan Supabase Auth.
 
@@ -11,7 +11,7 @@ Marketplace tiket kereta berbasis Next.js App Router, Prisma, dan Supabase Auth.
 
 ## Environment Variables
 
-Buat file `.env` dengan nilai berikut:
+Untuk produksi di Vercel, set env berikut di dashboard Vercel dan gunakan nilai berbeda untuk local VM bila perlu:
 
 ```env
 DATABASE_URL="postgresql://postgres:YOUR_DB_PASSWORD@db.YOUR_PROJECT_REF.supabase.co:5432/postgres"
@@ -20,7 +20,7 @@ DIRECT_URL="postgresql://postgres:YOUR_DB_PASSWORD@db.YOUR_PROJECT_REF.supabase.
 NEXT_PUBLIC_SUPABASE_URL="https://YOUR_PROJECT_REF.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="YOUR_ANON_KEY"
 SUPABASE_SERVICE_ROLE_KEY="YOUR_SERVICE_ROLE_KEY"
-NEXT_PUBLIC_BASE_URL="https://your-production-domain.com"
+NEXT_PUBLIC_BASE_URL="https://tiketsepur.vercel.app"
 SUPABASE_STORAGE_BUCKET="ticket-assets"
 MAINTENANCE_CRON_SECRET="replace-with-strong-random-secret"
 ACTIVITY_LOG_RETENTION_DAYS="90"
@@ -83,7 +83,7 @@ npm run prisma:push
 Di dashboard Supabase:
 
 1. Aktifkan provider yang ingin dipakai (Google / Email OTP).
-2. Tambahkan URL callback / redirect aplikasi production, misalnya `https://your-production-domain.com/`.
+2. Tambahkan URL callback / redirect aplikasi production, misalnya `https://tiketsepur.vercel.app/`.
 3. Untuk local development, pastikan URL berikut terdaftar:
 	- `http://localhost:3000`
 
@@ -123,10 +123,21 @@ Aplikasi dilengkapi SEO lengkap untuk production:
 
 ### Environment untuk Base URL
 ```env
-NEXT_PUBLIC_BASE_URL="https://tiketsecond.com"
+NEXT_PUBLIC_BASE_URL="https://tiketsepur.com"
 ```
 
 Update nilai ini ke domain production Anda untuk mesin pencari.
+
+## Deploy ke Vercel
+
+1. Push repo ke GitHub.
+2. Buat project baru di Vercel dan import repo tersebut.
+3. Set environment variables di Vercel sesuai blok `Environment Variables` di atas.
+4. Pastikan `NEXT_PUBLIC_BASE_URL` memakai `https://tiketsepur.vercel.app` atau custom domain kamu.
+5. Build command biarkan default `npm run build`.
+6. Output framework biarkan default Next.js.
+7. Deploy.
+8. Setelah deploy, buka Supabase Auth dan tambahkan domain production ke Site URL serta Redirect URLs.
 
 ## Build Production
 

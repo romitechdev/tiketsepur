@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
@@ -69,10 +70,8 @@ export default function Navbar() {
       { href: "/", label: "Tiket" },
       { href: "/upload", label: "Jual Tiket" },
       ...(user ? [{ href: "/my-tickets", label: "Tiket Saya" }] : []),
-      { href: "/terms", label: "Syarat & Ketentuan" },
-      { href: "/privacy", label: "Privasi" },
     ],
-    [user, isAdmin]
+    [user]
   );
 
   async function handleSignOut() {
@@ -97,11 +96,22 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-40 border-b-4 border-black bg-white">
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 lg:px-8">
-        <Link href="/" className="text-2xl font-black uppercase tracking-tighter md:text-3xl">
-          TiketSecond
+        <Link href="/" className="flex items-center gap-2.5 text-[1.55rem] font-extrabold tracking-[-0.04em] text-black md:text-[1.8rem]">
+          <Image
+            src="/logo.png"
+            alt="TiketSepur"
+            width={38}
+            height={38}
+            className="h-10 w-10 object-contain"
+            priority
+          />
+          <span className="leading-none">
+            <span className="text-black">Tiket</span>
+            <span className="text-gray-800">Sepur</span>
+          </span>
         </Link>
 
-        <div className="hidden items-center gap-8 text-[11px] font-black uppercase tracking-widest text-gray-600 md:flex">
+        <div className="ml-auto mr-8 hidden items-center gap-10 text-sm font-black uppercase tracking-[0.18em] text-gray-700 md:flex lg:mr-12">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="transition hover:text-black">
               {link.label}
@@ -191,7 +201,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-[11px] font-black uppercase tracking-widest transition hover:text-gray-600"
+              className="block text-sm font-black uppercase tracking-[0.18em] transition hover:text-gray-600"
             >
               {link.label}
             </Link>
@@ -201,14 +211,14 @@ export default function Navbar() {
               <Link
                 href="/profile"
                 onClick={() => setMobileOpen(false)}
-                className="block text-[11px] font-black uppercase tracking-widest transition hover:text-gray-600"
+                className="block text-sm font-black uppercase tracking-[0.18em] transition hover:text-gray-600"
               >
                 Edit Profile
               </Link>
               <Link
                 href="/activity"
                 onClick={() => setMobileOpen(false)}
-                className="block text-[11px] font-black uppercase tracking-widest transition hover:text-gray-600"
+                className="block text-sm font-black uppercase tracking-[0.18em] transition hover:text-gray-600"
               >
                 Aktivitas Saya
               </Link>

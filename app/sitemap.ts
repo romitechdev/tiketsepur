@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import db from '@/lib/db'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsecond.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsepur.vercel.app'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let ticketRoutes: Array<{ url: string; lastModified: Date; changeFrequency: 'hourly'; priority: number }> = []

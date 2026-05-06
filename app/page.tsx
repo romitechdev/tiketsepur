@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import db from "@/lib/db";
 import { Search } from "lucide-react";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsecond.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tiketsepur.com'
 
 export const metadata: Metadata = {
-  title: "Marketplace Tiket Kereta Preloved - TiketSecond",
+  title: "Marketplace Tiket Kereta Preloved - TiketSepur",
   description: "Cari dan beli tiket kereta preloved dengan harga terjangkau. Ribuan tiket tersedia dari berbagai kelas. Transaksi aman dan proses cepat.",
   keywords: ["tiket kereta", "beli tiket", "jual tiket kereta", "tiket murah", "tiket preloved"],
   openGraph: {
-    title: "TiketSecond - Marketplace Tiket Kereta Terlengkap",
+    title: "TiketSepur - Marketplace Tiket Kereta Terlengkap",
     description: "Cari, beli, dan jual tiket kereta preloved dengan harga terjangkau.",
     url: baseUrl,
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "TiketSecond Marketplace",
+        alt: "TiketSepur Marketplace",
       },
     ],
   },
@@ -82,7 +82,7 @@ export default async function Home({
             Cari, Dapat, Berangkat!
           </h1>
           <p className="text-sm md:text-base font-medium mb-12 max-w-md opacity-80">
-            Temukan tiket kereta preloved dengan harga masuk akal, proses cepat, dan transaksi yang lebih aman di TiketSecond.
+            Temukan tiket kereta preloved dengan harga masuk akal, proses cepat, dan transaksi yang lebih aman di TiketSepur.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-auto">
@@ -222,7 +222,7 @@ export default async function Home({
       {/* Subscribe Banner */}
       <div className="flex flex-col md:flex-row border-[3px] border-black shadow-kinetic bg-black text-white overflow-hidden my-24">
         <div className="md:w-[65%] p-8 lg:p-16 flex flex-col justify-center">
-          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">Masuk Ke Update TiketSecond.</h2>
+          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">Masuk Ke Update TiketSepur.</h2>
           <p className="text-sm font-medium opacity-80 mb-10 max-w-md leading-relaxed">Dapatkan info tiket baru, rute favorit, dan tips beli tiket aman langsung ke email Anda tiap minggu.</p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
               <input type="email" placeholder="EMAIL@CONTOH.COM" className="flex-1 p-4 text-xs font-black uppercase tracking-widest text-black outline-none border-[3px] border-transparent focus:border-gray-500 bg-white" />

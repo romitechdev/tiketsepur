@@ -6,7 +6,7 @@ import { LogIn, Mail } from "lucide-react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { useSupabaseAuth } from "@/components/SupabaseAuthProvider";
 
-const appBaseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://tiketsecond.vercel.app";
+const appBaseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 function getAppBaseUrl() {
   return appBaseUrl;
@@ -89,7 +89,7 @@ export default function LoginPage() {
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-2xl items-center px-4 py-10 md:px-8">
       <div className="w-full border-[3px] border-black bg-white p-8 shadow-kinetic md:p-10">
-        <p className="mb-2 text-[10px] font-black uppercase tracking-widest text-gray-500">Masuk ke TiketSecond</p>
+        <p className="mb-2 text-[10px] font-black uppercase tracking-widest text-gray-500">Masuk ke TiketSepur</p>
         <h1 className="mb-3 text-4xl font-black uppercase tracking-tighter">Login</h1>
         <p className="mb-8 text-sm font-semibold text-gray-600">
           Masuk dengan email atau Google untuk mulai jual dan kelola tiket.
