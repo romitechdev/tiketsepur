@@ -177,13 +177,13 @@ export default function Navbar() {
 
               <button
                 onClick={handleSignOut}
-                className="bg-black px-6 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition hover:bg-gray-800 md:hidden"
+                className="hidden"
               >
                 Keluar
               </button>
             </div>
           ) : (
-            <Link href="/login" className="bg-black px-8 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition hover:bg-gray-800">
+            <Link href="/login" className="hidden bg-black px-8 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition hover:bg-gray-800 md:inline-flex">
               Masuk
             </Link>
           )}
@@ -206,7 +206,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          {user && (
+          {user ? (
             <>
               <Link
                 href="/profile"
@@ -233,11 +233,19 @@ export default function Navbar() {
               )}
               <button
                 onClick={handleSignOut}
-                className="block text-[11px] font-black uppercase tracking-widest transition hover:text-gray-600"
+                className="block text-sm font-black uppercase tracking-[0.18em] transition hover:text-gray-600"
               >
                 Keluar
               </button>
             </>
+          ) : (
+            <Link
+              href="/login"
+              onClick={() => setMobileOpen(false)}
+              className="block text-sm font-black uppercase tracking-[0.18em] transition hover:text-gray-600"
+            >
+              Masuk
+            </Link>
           )}
         </div>
       )}

@@ -89,7 +89,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body className={`${inter.className} min-h-screen flex flex-col text-black antialiased`}>
+      <body className={`${inter.className} min-h-screen flex flex-col overflow-x-hidden text-black antialiased`}>
         <Providers>
           <Navbar />
           <main className="flex-1 w-full max-w-[1400px] mx-auto pb-16">

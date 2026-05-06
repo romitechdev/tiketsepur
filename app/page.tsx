@@ -74,28 +74,28 @@ export default async function Home({
   const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 
   return (
-    <div className="space-y-16 mt-8 p-4 md:p-8">
+    <div className="space-y-12 md:space-y-16 mt-6 md:mt-8 p-4 md:p-8 overflow-x-hidden">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row border-kinetic shadow-kinetic-lg bg-white overflow-hidden">
-        <div className="md:w-[55%] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.95] mb-8 mt-4">
+        <div className="md:w-[55%] p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.95] mb-6 md:mb-8 mt-2 md:mt-4 max-w-[11ch] md:max-w-none">
             Cari, Dapat, Berangkat!
           </h1>
-          <p className="text-sm md:text-base font-medium mb-12 max-w-md opacity-80">
+          <p className="text-sm md:text-base font-medium mb-8 md:mb-12 max-w-md opacity-80 leading-relaxed">
             Temukan tiket kereta preloved dengan harga masuk akal, proses cepat, dan transaksi yang lebih aman di TiketSepur.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-auto">
             <form method="GET" action="/search" className="flex flex-col sm:flex-row gap-4 w-full">
-              <div className="flex-1 border-[2px] border-black flex items-center px-4 py-3 bg-[#f4f4f4]">
-                <span className="w-3 h-3 border-2 border-black mr-3 inline-block"></span>
-                <input type="text" name="asal" placeholder="STASIUN ASAL" className="bg-transparent text-xs font-black tracking-widest outline-none w-full uppercase" />
+              <div className="flex-1 border-[2px] border-black flex items-center px-3 sm:px-4 py-3 bg-[#f4f4f4] min-w-0">
+                <span className="w-3 h-3 border-2 border-black mr-3 inline-block shrink-0"></span>
+                <input type="text" name="asal" placeholder="STASIUN ASAL" className="bg-transparent text-xs font-black tracking-[0.14em] outline-none w-full uppercase min-w-0" />
               </div>
-              <div className="flex-1 border-[2px] border-black flex items-center px-4 py-3 bg-[#f4f4f4]">
-                <span className="w-3 h-3 rounded-full border-2 border-black mr-3 inline-block"></span>
-                <input type="text" name="tujuan" placeholder="STASIUN TUJUAN" className="bg-transparent text-xs font-black tracking-widest outline-none w-full uppercase" />
+              <div className="flex-1 border-[2px] border-black flex items-center px-3 sm:px-4 py-3 bg-[#f4f4f4] min-w-0">
+                <span className="w-3 h-3 rounded-full border-2 border-black mr-3 inline-block shrink-0"></span>
+                <input type="text" name="tujuan" placeholder="STASIUN TUJUAN" className="bg-transparent text-xs font-black tracking-[0.14em] outline-none w-full uppercase min-w-0" />
               </div>
-              <button type="submit" className="bg-black text-white px-6 w-full sm:w-auto flex items-center justify-center border-2 border-black hover:bg-gray-800 transition py-4 sm:py-0">
+              <button type="submit" className="bg-black text-white px-6 w-full sm:w-auto flex items-center justify-center border-2 border-black hover:bg-gray-800 transition py-4 sm:py-0 shrink-0">
                 <Search className="h-5 w-5" />
               </button>
             </form>
@@ -108,18 +108,18 @@ export default async function Home({
       </div>
 
       {/* Departures Grid */}
-      <div className="pt-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 border-b-2 border-black pb-4 gap-4">
+      <div className="pt-4 md:pt-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 md:mb-8 border-b-2 border-black pb-4 gap-4">
           <div>
             <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">Lalu Lintas Real-time</p>
-            <h2 className="text-3xl font-black uppercase tracking-tighter">Tiket Tersedia Hari Ini</h2>
+            <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tighter leading-tight">Tiket Tersedia Hari Ini</h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-            <form method="GET" className="flex gap-2 items-center">
+            <form method="GET" className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center w-full sm:w-auto">
               <select
                 name="kelas"
                 defaultValue={kelas}
-                className="border-[2px] border-black px-3 py-2 text-[10px] font-black uppercase tracking-widest bg-white"
+                className="border-[2px] border-black px-3 py-2 text-[10px] font-black uppercase tracking-widest bg-white w-full sm:w-auto"
               >
                 <option value="">Semua Kategori</option>
                 <option value="Ekonomi">Ekonomi</option>
@@ -143,7 +143,7 @@ export default async function Home({
                 </Link>
               )}
             </form>
-            <Link href="/upload" className="text-[10px] font-black uppercase tracking-widest border-b-2 border-transparent hover:border-black transition py-1 self-start sm:self-auto">Jual Tiketmu</Link>
+            <Link href="/upload" className="text-[10px] font-black uppercase tracking-widest border-b-2 border-transparent hover:border-black transition py-1 self-start sm:self-auto whitespace-nowrap">Jual Tiketmu</Link>
           </div>
         </div>
 
@@ -154,19 +154,19 @@ export default async function Home({
           </div>
         ) : (
           <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {tickets.map((t) => (
-                <div key={t.id} className="border-[3px] border-black bg-white shadow-kinetic p-6 lg:p-8 flex flex-col group hover:-translate-y-1 hover:shadow-kinetic-lg transition-all duration-200">
-                  <div className="flex justify-between items-center mb-8 pb-4 border-b-2 border-black">
+                <div key={t.id} className="border-[3px] border-black bg-white shadow-kinetic p-5 sm:p-6 lg:p-8 flex flex-col group hover:-translate-y-1 hover:shadow-kinetic-lg transition-all duration-200">
+                  <div className="flex justify-between items-center mb-6 sm:mb-8 pb-4 border-b-2 border-black gap-3">
                     <span className="text-[9px] font-black uppercase tracking-widest opacity-60">Express-{t.id.substring(t.id.length - 3)}</span>
                     <span className="bg-black text-white text-[9px] font-black uppercase tracking-widest px-2 py-1">Siap Dipesan</span>
                   </div>
                   
-                  <h3 className="text-[1.75rem] font-black uppercase tracking-tighter leading-[1.1] mb-8">
+                  <h3 className="text-[1.45rem] sm:text-[1.75rem] font-black uppercase tracking-tighter leading-[1.1] mb-6 sm:mb-8 break-words">
                     {t.asal} <br/><span className="opacity-30">→</span><br/> {t.tujuan}
                   </h3>
                   
-                  <div className="space-y-4 mb-10 text-[10px] font-black uppercase tracking-widest">
+                  <div className="space-y-4 mb-8 sm:mb-10 text-[10px] font-black uppercase tracking-widest">
                     <div className="flex items-center gap-3">
                        <div className="w-3.5 h-3.5 border-[2px] border-black"></div>
                        {months[parseInt(t.tanggal.split('-')[1]) - 1] || 'N/A'} {t.tanggal.split('-')[2] || "01"}, {t.tanggal.split('-')[0] || "2024"}
@@ -177,12 +177,12 @@ export default async function Home({
                     </div>
                   </div>
 
-                  <div className="mt-auto border-t-2 border-black pt-5 flex items-end justify-between">
+                  <div className="mt-auto border-t-2 border-black pt-5 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                     <div>
                       <span className="text-[9px] font-black uppercase tracking-widest text-gray-500 block mb-1">Harga Standar</span>
-                      <span className="text-2xl font-black tracking-tighter">Rp {t.harga.toLocaleString('id-ID')}</span>
+                      <span className="text-xl sm:text-2xl font-black tracking-tighter">Rp {t.harga.toLocaleString('id-ID')}</span>
                     </div>
-                    <Link href={`/ticket/${t.id}`} className="bg-black text-white px-4 py-2.5 text-[10px] font-black uppercase tracking-widest hover:bg-gray-800 transition shadow-sm">
+                    <Link href={`/ticket/${t.id}`} className="bg-black text-white px-4 py-2.5 text-[10px] font-black uppercase tracking-widest hover:bg-gray-800 transition shadow-sm text-center w-full sm:w-auto">
                       Lihat Detail
                     </Link>
                   </div>
@@ -220,24 +220,24 @@ export default async function Home({
       </div>
 
       {/* Subscribe Banner */}
-      <div className="flex flex-col md:flex-row border-[3px] border-black shadow-kinetic bg-black text-white overflow-hidden my-24">
-        <div className="md:w-[65%] p-8 lg:p-16 flex flex-col justify-center">
-          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 leading-none">Masuk Ke Update TiketSepur.</h2>
-          <p className="text-sm font-medium opacity-80 mb-10 max-w-md leading-relaxed">Dapatkan info tiket baru, rute favorit, dan tips beli tiket aman langsung ke email Anda tiap minggu.</p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
-              <input type="email" placeholder="EMAIL@CONTOH.COM" className="flex-1 p-4 text-xs font-black uppercase tracking-widest text-black outline-none border-[3px] border-transparent focus:border-gray-500 bg-white" />
-            <button className="bg-[#e4e4e4] text-black px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white transition border-[3px] border-[#e4e4e4]">
+      <div className="flex flex-col md:flex-row border-[3px] border-black shadow-kinetic bg-black text-white overflow-hidden my-16 md:my-24">
+        <div className="md:w-[65%] p-6 sm:p-8 lg:p-16 flex flex-col justify-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 leading-none max-w-[12ch] sm:max-w-none">Masuk Ke Update TiketSepur.</h2>
+          <p className="text-sm font-medium opacity-80 mb-8 md:mb-10 max-w-md leading-relaxed">Dapatkan info tiket baru, rute favorit, dan tips beli tiket aman langsung ke email Anda tiap minggu.</p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-lg w-full">
+              <input type="email" placeholder="EMAIL@CONTOH.COM" className="flex-1 p-4 text-xs font-black uppercase tracking-widest text-black outline-none border-[3px] border-transparent focus:border-gray-500 bg-white min-w-0" />
+            <button className="bg-[#e4e4e4] text-black px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white transition border-[3px] border-[#e4e4e4] w-full sm:w-auto">
               Berlangganan
             </button>
           </div>
         </div>
-        <div className="md:w-[35%] bg-[#eee] text-black border-t-4 md:border-t-0 md:border-l-4 border-black p-12 flex flex-col items-center justify-center text-center">
-            <div className="w-20 h-20 border-[3px] border-black mb-8 grid grid-cols-2 grid-rows-2 p-1.5 gap-1.5">
+        <div className="md:w-[35%] bg-[#eee] text-black border-t-4 md:border-t-0 md:border-l-4 border-black p-8 sm:p-12 flex flex-col items-center justify-center text-center">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 border-[3px] border-black mb-6 sm:mb-8 grid grid-cols-2 grid-rows-2 p-1.5 gap-1.5">
               <div className="bg-black"></div><div className="border-2 border-black"></div>
               <div className="border-2 border-black"></div><div className="bg-black"></div>
             </div>
             <h3 className="text-[15px] font-black uppercase tracking-widest mb-3">Fokus Mobile</h3>
-            <p className="text-[9px] font-black uppercase tracking-widest opacity-60 leading-relaxed px-4">Pantau tiket kapan saja langsung dari genggaman</p>
+            <p className="text-[9px] font-black uppercase tracking-widest opacity-60 leading-relaxed px-2 sm:px-4">Pantau tiket kapan saja langsung dari genggaman</p>
         </div>
       </div>
     </div>
